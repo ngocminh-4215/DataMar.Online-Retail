@@ -1,10 +1,13 @@
 # DataMar.Online-Retail
 Xây dựng hệ thống giỏ hàng gợi ý dựa trên việc kết hợp 2 mô hình User-based Collaborative Filtering và Apriori
 1. Mục tiêu: Phân tích dữ liệu giao dịch bán hàng trực tuyến nhằm hiểu rõ hành vi mua hàng của khách hàng, phân nhóm và đưa ra giỏ hàng gợi ý dựa theo 2 mô hình User-based Collaborative Filtering và Apriori
+   
 2. Dữ liệu:
    - Làm sạch dữ liệu: Loại bỏ các dòng dữ liệu thiếu CustomerID, Quantity ≤ 0 và UnitPrice ≤ 0; sau lọc còn 397.884 dòng giao dịch sản phẩm.
    - Phân tích mô tả: Tổng hợp số đơn và giá trị dòng mua theo tháng; xác định khách hàng xuất hiện ở cả tháng hiện tại và tháng trước; tính phần doanh thu đến từ nhóm này.
+
 3. Phương pháp phân tích: Chia đều dữ liệu thành train 80% (318.307 dòng) và test 20% (79.577 dòng). Đối với tập train, sử dụng K-means clustering tạo ma trận khách hàng–sản phẩm, dùng User-based Collaborative Filtering kết hợp luật Apriori với trọng số alpha = 0,5. Sau đó dùng tập test để kiểm thử lại mô hình.
+   
 4. Kết quả và đề xuất:
    
 4.1. Doanh thu và số đơn tăng mạnh vào giai đoạn cuối năm:
